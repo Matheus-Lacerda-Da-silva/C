@@ -1,0 +1,41 @@
+#include <stdio.h>
+int main()
+{
+    int opcao;
+    int idade;
+    char nome[30];
+    
+    printf("menu de opcao\n");
+    printf("1. fazer check-in\n");
+    printf("2. chamar serviço de quarto\n");
+    printf("3. fazer pedido\n");
+    printf("escolha a opção: ");
+    scanf("%d", &opcao);
+    
+    switch(opcao) {
+      case 1:
+         printf("seja bem vindo\n");
+         printf("qual o seu nome: ");
+         scanf("%s", nome);
+         printf("agora digite sua idade: ");
+         scanf("%d", &idade);
+         printf("%s, %d\n", nome, idade);
+         printf("já estamos separando um quarto para voce");
+         break;
+      case 2:
+          printf("vamos enviar um funcionario ate seu quarto");
+          break;
+      case 3:
+          printf("os pratos de hoje são:\n");
+          printf("1. arroz, feijao, e carne\n");
+          printf("2. macarrao, com frango\n");
+          printf("3. salada cesar\n");
+          printf("escolha sua opção: ");
+          scanf("%d", &opcao);
+          printf("já estamos levando sua refeição");
+          break;
+          default :
+          printf("essa opção nao tem, por favor coloque uma opção de 1 a 3");
+    }
+    return 0;
+}
