@@ -1,0 +1,72 @@
+#include <stdio.h>
+ 
+int main()
+{
+   char nomeCliente[15];
+   int id1;
+   int id2;
+   int id3;
+   
+   char produto1[15];
+   char produto2[15];
+   char produto3[15];
+   
+   int quantidadeProduto1;
+   int quantidadeProduto2;
+   int quantidadeProduto3;
+   
+   float precoUnitario1;
+   float precoUnitario2;
+   float precoUnitario3;
+   
+   float valor1;
+   float valor2;
+   float valor3;
+   
+   float precoTotal;
+   
+   printf("nome do cliente: ");
+   scanf("%s", nomeCliente);
+   printf("cadastre o id do produto 1: ");
+   scanf("%d", &id1);
+   printf("cadastre o id do produto 2: ");
+   scanf("%d", &id2);
+   printf("cadastre o id do produto 3: ");
+   scanf("%d", &id3);
+   printf("qual o nome do primeiro produto cadastrado: ");
+   scanf("%s", produto1);
+   printf("qual o nome do segundo produto cadastrado: ");
+   scanf("%s", produto2);
+   printf("qual o nome do terceiro produto cadastrado: ");
+   scanf("%s", produto3);
+   printf("quantidade do primeiro produto: ");
+   scanf("%i", &quantidadeProduto1);
+   printf("quantidade do segundo produto: ");
+   scanf("%i", &quantidadeProduto2);
+   printf("quantidade do terceiro produto: ");
+   scanf("%i", &quantidadeProduto3);
+   printf("qual o valor unitario do produto 1: ");
+   scanf("%f", &precoUnitario1);
+   printf("qual o valor unitario do produto 2: ");
+   scanf("%f", &precoUnitario2);
+   printf("qual o valor unitario do produto 3: ");
+   scanf("%f", &precoUnitario3);
+   
+   valor1 = precoUnitario1 * quantidadeProduto1;
+   valor2 = precoUnitario2 * quantidadeProduto2;
+   valor3 = precoUnitario3 * quantidadeProduto3;
+   precoTotal = valor1 + valor2 + valor3;
+   
+   printf("---------------------------------------------------------\n");
+   printf(" %s\n", nomeCliente);
+   printf("---------------------------------------------------------\n");
+   printf("id | produto | quantidade | preço unitario | valor total\n");
+   printf("---------------------------------------------------------\n");
+   printf("%i,| %s,| %i,| %.2f,| %.2f\n", id1, produto1, quantidadeProduto1, precoUnitario1, valor1);
+   printf("%i,| %s,| %i,| %.2f,| %.2f\n", id2, produto2, quantidadeProduto2, precoUnitario2, valor2);
+   printf("%i,| %s,| %i,| %.2f,| %.2f\n", id3, produto3, quantidadeProduto3, precoUnitario3, valor3);
+   printf("-------------- valor final dos produtos -----------------\n");
+   printf(" %.2f\n", precoTotal);
+   printf("---------------------------------------------------------\n");
+    return 0;
+}
